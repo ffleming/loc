@@ -1,6 +1,6 @@
 require 'capistrano/setup'
 require 'capistrano/deploy'
-require 'capistrano/unicorn_nginx'
+require 'capistrano/passenger'
 require 'capistrano/safe_deploy_to'
 require 'capistrano/rvm'
 require 'capistrano/bundler'

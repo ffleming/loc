@@ -8,25 +8,25 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-passenger (0.2.0)
+      capistrano (~> 3.0)
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
     capistrano-safe-deploy-to (1.1.1)
       capistrano (>= 3.0)
-    capistrano-unicorn-nginx (3.4.0)
-      capistrano (>= 3.1)
-      sshkit (>= 1.2.0)
     colorize (0.7.7)
     i18n (0.7.0)
-    kgio (2.10.0)
     maxminddb (0.1.8)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.1)
+    passenger (5.0.29)
+      rack
+      rake (>= 0.8.1)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    raindrops (0.15.0)
     rake (10.4.2)
     sinatra (1.4.6)
       rack (~> 1.4)
@@ -37,10 +37,6 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     tilt (2.0.1)
-    unicorn (5.0.1)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -48,12 +44,15 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-bundler
+  capistrano-passenger
   capistrano-rvm
   capistrano-safe-deploy-to
-  capistrano-unicorn-nginx
   maxminddb
+  passenger
   sinatra
-  unicorn
+
+RUBY VERSION
+   ruby 2.2.4p230
 
 BUNDLED WITH
-   1.10.6
+   1.12.4

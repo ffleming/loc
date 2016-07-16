@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
+ruby '2.2.4'
 gem 'sinatra'
-gem 'unicorn'
+gem 'passenger'
 gem 'maxminddb'
 group :deployment do
   gem 'capistrano'
-  gem 'capistrano-unicorn-nginx'
+  gem 'capistrano-passenger'
   gem 'capistrano-safe-deploy-to'
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
